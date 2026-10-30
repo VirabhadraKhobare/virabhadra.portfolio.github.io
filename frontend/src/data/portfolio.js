@@ -171,6 +171,15 @@ export const certificateData = [
     verificationUrl: null,
     notes: "12-week course — Score: 72% (Assignments: 24.06/25, Exam: 48/75)",
   },
+  {
+    title: "Certified MERN Stack Development Professional",
+    issuer: "Infynow Software Solutions LLP",
+    issuedAt: "Dec 2025 - Jun 2026",
+    pdfUrl:
+      "https://drive.google.com/file/d/1WBY7sJSXYc6tvMrmhx4bvTgQIXZktX8O/view?usp=sharing",
+    verificationUrl: null,
+    notes: "6-months course",
+  },
 ];
 
 export const servicesData = [

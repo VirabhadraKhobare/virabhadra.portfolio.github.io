@@ -33,10 +33,10 @@ export const Navbar = () => {
             VK
           </span>
           <div>
-            <p className="font-display text-base font-bold tracking-tight text-[var(--text-strong)] sm:text-lg">
+            <p className="font-display text-base font-bold tracking-tight sm:text-lg">
               Virbhadra Khobare
             </p>
-            <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--text-soft)] sm:text-xs sm:tracking-[0.28em]">
+            <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--muted)] sm:text-xs sm:tracking-[0.28em]">
               Full Stack Developer
             </p>
           </div>
@@ -47,28 +47,34 @@ export const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-[var(--text-soft)] transition hover:text-[var(--text-strong)] focus-ring"
+              className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--text)] focus-ring"
             >
               {item.label}
             </a>
           ))}
           <a
-            href="https://drive.google.com/file/d/12Rm2otdjCkzTYd4hjQgb41ImEalK66AO/view?usp=sharing"
+            href="/Virabhadra_Khobare_FullStack_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="control-surface inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition focus-ring"
-            aria-label="Open resume in Google Drive"
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:bg-white/10 focus-ring"
           >
             Resume
           </a>
-          {/* Admin link removed for public site */}
+          <NavLink
+            to="/admin/login"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:bg-white/10 focus-ring"
+          >
+            <Sparkles size={16} />
+            Admin
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-2">
           <button
             type="button"
             onClick={toggleTheme}
-            className="control-surface inline-flex h-11 w-11 items-center justify-center rounded-full transition hover:scale-105 focus-ring"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--panel)] text-[var(--text)] transition hover:scale-105 hover:bg-white/10 focus-ring"
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
@@ -80,7 +86,7 @@ export const Navbar = () => {
           <button
             type="button"
             onClick={() => setIsMenuOpen((value) => !value)}
-            className="control-surface inline-flex h-11 w-11 items-center justify-center rounded-full transition hover:scale-105 lg:hidden focus-ring"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--panel)] text-[var(--text)] transition hover:scale-105 lg:hidden focus-ring"
             aria-label="Toggle menu"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation-menu"
@@ -105,26 +111,33 @@ export const Navbar = () => {
                   className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-[var(--text)] transition hover:bg-white/10 focus-ring"
                 >
                   <span>{item.label}</span>
-                  <ArrowUpRight size={16} className="text-[var(--text-soft)]" />
+                  <ArrowUpRight size={16} className="text-[var(--muted)]" />
                 </a>
               ))}
             </div>
 
             <div className="mt-3 flex gap-3">
               <a
-                href="https://drive.google.com/file/d/12Rm2otdjCkzTYd4hjQgb41ImEalK66AO/view?usp=sharing"
+                href="/Virabhadra_Khobare_FullStack_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                download
                 onClick={() => setIsMenuOpen(false)}
-                className="control-surface flex-1 items-center justify-center rounded-full px-4 py-3 text-center text-sm font-semibold transition focus-ring"
-                aria-label="Open resume in Google Drive"
+                className="flex-1 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--panel)] px-4 py-3 text-center text-sm font-semibold text-[var(--text)] transition hover:bg-white/10 focus-ring"
               >
                 Download Resume
               </a>
             </div>
 
             <div className="flex items-center gap-3 rounded-3xl border border-[var(--border)] bg-[var(--panel-strong)] p-3">
-              {/* Admin Login removed for public site */}
+              <NavLink
+                to="/admin/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-fuchsia-500 px-4 py-3 text-sm font-semibold text-white shadow-glow transition hover:opacity-95 focus-ring"
+              >
+                <Sparkles size={16} />
+                Admin Login
+              </NavLink>
             </div>
           </div>
         </div>
