@@ -9,6 +9,7 @@ build
 uploads
 coverage
 *.log
-./public/Virabhadra-Passport-Size-Photo.png
-./public/viru-image.jpg
+../public/Virabhadra-Passport-Size-Photo.png
+../public/viru-image.jpg
+
 

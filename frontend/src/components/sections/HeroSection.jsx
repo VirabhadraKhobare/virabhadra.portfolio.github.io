@@ -126,7 +126,7 @@ export const HeroSection = () => {
             ))}
           </div>
 
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-9 grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
             {heroStats.map((stat) => (
               <GlassCard key={stat.label} className="p-4 sm:p-5">
                 <p className="text-2xl font-black text-[var(--text)] sm:text-3xl lg:text-[2rem]">
