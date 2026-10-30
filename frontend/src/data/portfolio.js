@@ -73,6 +73,7 @@ export const skillRadar = [
   { label: "MongoDB", value: 90 },
   { label: "OpenAI", value: 80 },
   { label: "Deployment", value: 85 },
+  { label: "Testing", value: 75 },
 ];
 
 export const projectData = [
